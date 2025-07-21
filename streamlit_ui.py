@@ -9,8 +9,10 @@ from openai import OpenAI
 
 # === Load environment variables ===
 load_dotenv()
-openai_api_key = os.getenv("OPENAI_API_KEY")
-client = OpenAI(api_key=openai_api_key)
+#openai_api_key = os.getenv("OPENAI_API_KEY")
+#client = OpenAI(api_key=openai_api_key)
+openai_api_key = st.secrets["openai"]["api_key"]
+
 
 # === Streamlit page config ===
 st.set_page_config(
